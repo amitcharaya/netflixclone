@@ -8,7 +8,7 @@ function Banner() {
 
   useEffect(() => {
     const fetchBannerMovie = async () => {
-      const json = await tmdbApi.get("/discover/tv", { with_networks: 213 });
+      const json = await tmdbApi.get("/discover/movie", { with_networks: 213 });
       setMovie(
         json.results[
           Math.floor(Math.random() * json.results.length - 1)
